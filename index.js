@@ -60,6 +60,7 @@ S3Storage.prototype._handleFile = function (req, file, cb) {
         Bucket: that.options.bucket,
         Key: filePath,
         ContentType: contentType,
+        ACL: this.options.ACL,
         Body: (_stream || file.stream)
       })
 
